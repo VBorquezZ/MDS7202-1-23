@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 def animales(input):
     
     '''
@@ -12,6 +13,9 @@ def animales(input):
         print('https://www.youtube.com/watch?v=jofNR_WkoCE')
     else:
         raise ValueError('animal no reconocido :(')
+=======
+from animales import animales
+>>>>>>> main
 
 if __name__ == '__main__':
     print("Ingrese el animalito para saber que dice:")
