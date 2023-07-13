@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/borqu/OneDrive/Escritorio/root/FCFM/Oto%C3%B1o2023/LabPC/MDS7202-1-23/Lab11/lab11-proyecto/mlruns/342664629358445894/62cf3c5a0f554227b4e6122774ade399/artifacts
+end_time: 1689209591335
+entry_point_name: ''
+experiment_id: '342664629358445894'
+lifecycle_stage: active
+run_id: 62cf3c5a0f554227b4e6122774ade399
+run_name: runRandom_Forestdefault_hyps
+run_uuid: 62cf3c5a0f554227b4e6122774ade399
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1689209587723
+status: 3
+tags: []
+user_id: borqu
