@@ -4,11 +4,11 @@
 # Documentation for this file format can be found in "Parameters"
 # Link: https://docs.kedro.org/en/0.18.11/kedro_project_setup/configuration.html#parameters
 
-dict_probs:
-  target: "price"
+split_params:
+  target: "credit_score"
   train_ratio: 0.8
   valid_ratio: 0.1
-  random_state: 67
+  random_state: 42
 
 Params_Nulls_Replacement:
   lambdas_Poiss_Dists:

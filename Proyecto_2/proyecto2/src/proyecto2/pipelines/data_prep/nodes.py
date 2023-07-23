@@ -188,10 +188,10 @@ def get_column_transformer():
     ]
     pass_through_vars = [
         "customer_id",       
-        "credit_score"
+        #"credit_score"
     ]
 
-    preprocessing_transformer = ColumnTransformer(
+    Col_Transformer = ColumnTransformer(
         transformers = [
             ('passthrough', 'passthrough', pass_through_vars),
             ('OneHotEncoder', OneHotEncoder(sparse = False),  categorical_vars),
@@ -199,4 +199,30 @@ def get_column_transformer():
             ('RegularNumericalTransform', StandardScaler(), num_vars),
             ]
         )
-    preprocessing_transformer.set_output(transform="pandas")
+    Col_Transformer.set_output(transform="pandas")
+
+    return Col_Transformer
+
+
+def split_data(data: pd.DataFrame, params: Dict):
+
+    shuffled_data = data.sample(frac=1, random_state=params["random_state"])
+    rows = shuffled_data.shape[0]
+
+    train_ratio = params["train_ratio"]
+    valid_ratio = params["valid_ratio"]
+
+    train_idx = int(rows * train_ratio)
+    valid_idx = train_idx + int(rows * valid_ratio)
+
+    assert rows > valid_idx, "test split should not be empty"
+
+    target = params["target"]
+    X = shuffled_data.drop(columns=target)
+    y = shuffled_data[[target]]
+
+    X_train, y_train = X[:train_idx], y[:train_idx]
+    X_valid, y_valid = X[train_idx:valid_idx], y[train_idx:valid_idx]
+    X_test, y_test = X[valid_idx:], y[valid_idx:]
+
+    return X_train, X_valid, X_test, y_train, y_valid, y_test

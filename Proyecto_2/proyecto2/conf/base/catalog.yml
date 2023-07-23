@@ -10,3 +10,31 @@ raw_bank_data:
 bank_data_no_nulls:
   type: pandas.ParquetDataSet
   filepath: data/02_intermediate/bank_data_no_nulls.parquet
+
+X_train:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/X_train.parquet
+
+X_valid:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/X_valid.parquet
+
+X_test:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/X_test.parquet
+
+y_train:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/y_train.parquet
+
+y_valid:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/y_valid.parquet
+
+y_test:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/y_test.parquet
+
+Col_Transformer:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/Col_Transformer.pickle
