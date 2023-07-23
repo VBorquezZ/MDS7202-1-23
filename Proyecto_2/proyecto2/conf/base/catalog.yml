@@ -71,3 +71,39 @@ XGB_Pipe_B:
   type: pickle.PickleDataSet
   filepath: data/06_models/XGB_Pipe_B.pickle
 
+
+Dummy_Pipe_B_Report:
+  type: pandas.ParquetDataSet
+  filepath: data/08_reporting/Dummy_Pipe_B_Report.parquet
+
+LR_Pipe_B_Report:
+  type: pandas.ParquetDataSet
+  filepath: data/08_reporting/LR_Pipe_B_Report.parquet
+
+KNN_Pipe_B_Report:
+  type: pandas.ParquetDataSet
+  filepath: data/08_reporting/KNN_Pipe_B_Report.parquet
+
+DT_Pipe_B_Report:
+  type: pandas.ParquetDataSet
+  filepath: data/08_reporting/DT_Pipe_B_Report.parquet
+
+SVC_Pipe_B_Report:
+  type: pandas.ParquetDataSet
+  filepath: data/08_reporting/SVC_Pipe_B_Report.parquet
+
+RF_Pipe_B_Report:
+  type: pandas.ParquetDataSet
+  filepath: data/08_reporting/RF_Pipe_B_Report.parquet
+
+LGBM_Pipe_B_Report:
+  type: pandas.ParquetDataSet
+  filepath: data/08_reporting/LGBM_Pipe_B_Report.parquet
+
+XGB_Pipe_B_Report:
+  type: pandas.ParquetDataSet
+  filepath: data/08_reporting/XGB_Pipe_B_Report.parquet 
+
+recalls_class1:
+  type: pandas.ParquetDataSet
+  filepath: data/08_reporting/recalls_class1.parquet 
