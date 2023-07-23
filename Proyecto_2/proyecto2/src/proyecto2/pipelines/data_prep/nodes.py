@@ -162,7 +162,7 @@ def replace_null_values(raw_bank_data: pd.DataFrame,
 def get_column_transformer():
     num_vars_extreme_outliers = [
         "age",
-        "anual_income",
+        "annual_income",
         "num_bank_accounts",
         "num_credit_card",
         "interest_rate",
@@ -193,13 +193,13 @@ def get_column_transformer():
 
     Col_Transformer = ColumnTransformer(
         transformers = [
-            ('passthrough', 'passthrough', pass_through_vars),
-            ('OneHotEncoder', OneHotEncoder(sparse = False),  categorical_vars),
+            #('passthrough', 'passthrough', pass_through_vars),
+            ('OneHotEncoder', OneHotEncoder(sparse_output=False),  categorical_vars),
             ('RobustNumericalTransform', RobustScaler(), num_vars_extreme_outliers),
             ('RegularNumericalTransform', StandardScaler(), num_vars),
             ]
         )
-    Col_Transformer.set_output(transform="pandas")
+    Col_Transformer = Col_Transformer.set_output(transform="pandas")
 
     return Col_Transformer
 
@@ -221,8 +221,13 @@ def split_data(data: pd.DataFrame, params: Dict):
     X = shuffled_data.drop(columns=target)
     y = shuffled_data[[target]]
 
-    X_train, y_train = X[:train_idx], y[:train_idx]
-    X_valid, y_valid = X[train_idx:valid_idx], y[train_idx:valid_idx]
-    X_test, y_test = X[valid_idx:], y[valid_idx:]
+    X_train_No_Transforms, y_train = X[:train_idx], y[:train_idx]
+    X_valid_No_Transforms, y_valid = X[train_idx:valid_idx], y[train_idx:valid_idx]
+    X_test_No_Transforms, y_test = X[valid_idx:], y[valid_idx:]
 
-    return X_train, X_valid, X_test, y_train, y_valid, y_test
+    return (X_train_No_Transforms, 
+            X_valid_No_Transforms, 
+            X_test_No_Transforms, 
+            y_train, 
+            y_valid, 
+            y_test)

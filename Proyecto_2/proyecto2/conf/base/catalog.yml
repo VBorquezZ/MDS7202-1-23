@@ -38,3 +38,36 @@ y_test:
 Col_Transformer:
   type: pickle.PickleDataSet
   filepath: data/06_models/Col_Transformer.pickle
+
+Dummy_Pipe_B:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/Dummy_Pipe_B.pickle
+
+LR_Pipe_B:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/LR_Pipe_B.pickle
+
+KN_Pipe_B:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/KN_Pipe_B.pickle
+
+DT_Pipe_B:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/DT_Pipe_B.pickle
+
+SVC_Pipe_B:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/SVC_Pipe_B.pickle
+
+RF_Pipe_B:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/RF_Pipe_B.pickle
+
+LGBM_Pipe_B:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/LGBM_Pipe_B.pickle
+
+XGB_Pipe_B:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/XGB_Pipe_B.pickle
+
