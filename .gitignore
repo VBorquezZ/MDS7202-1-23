@@ -17,11 +17,11 @@ Proyecto/datos_proyecto_1/df_email_phone.parquet
 Proyecto/datos_proyecto_1_mds7202-main.zip
 
 # ignore everything in the following folders
-Proyecto_2/data/**
-Proyecto_2/proyecto2/data/01_raw**
-Proyecto_2/proyecto2/data/02_intermediate**
-Proyecto_2/proyecto2/data/03_primary**
-Proyecto_2/proyecto2/data/04_feature**
-Proyecto_2/proyecto2/data/05_model_input**
-Proyecto_2/proyecto2/data/06_models**
-Proyecto_2/proyecto2/data/07_model_input**
+# Proyecto_2/data/**
+# Proyecto_2/proyecto2/data/01_raw**
+# Proyecto_2/proyecto2/data/02_intermediate**
+# Proyecto_2/proyecto2/data/03_primary**
+# Proyecto_2/proyecto2/data/04_feature**
+# Proyecto_2/proyecto2/data/05_model_input**
+# Proyecto_2/proyecto2/data/06_models**
+# Proyecto_2/proyecto2/data/07_model_input**
